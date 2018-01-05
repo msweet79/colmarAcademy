@@ -1,1 +1,89 @@
 /*Universal Formats*/
+html {
+  font-size: 16px;
+}
+
+body {
+  background-color: #efefef;
+  color: #535353;
+  font-family: 'helvetica', sans-serif;
+}
+
+.page-container {
+  margin: 0 auto;
+  background-color: #efefef;
+}
+
+/*Header format*/
+
+header {
+  border: 2px solid black;
+  position: fixed;
+  z-index: 1;
+}
+
+.mobile-header {
+  display: none;
+}
+
+.desktop-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 64px;
+  padding: 0 24px;
+}
+
+.header-left {
+  height: 32px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding-left: 1.5rem;
+}
+
+.company-name {
+  font-family: 'Graduate', sans-serif;
+  font-size: 26px;
+  display: flex;
+}
+
+.company-name span:last-child {
+  color: #ff3b3f;
+}
+
+nav ul {
+  padding-right: 1.5rem;
+}
+
+nav li {
+  display: inline-block;
+  margin-left: 16px;
+}
+
+header a {
+  color: #535353;
+  text-decoration: none;
+}
+
+nav a::after {
+  content: '';
+  display: block;
+  width: 0;
+  height: 2px;
+  background: #535353;
+  transition: width 0.3s;
+}
+
+.article a::after {
+  content: '';
+  display: block;
+  width: 0;
+  height: 2px;
+  background: #ff3b3f;
+  transition: width 0.3s;
+}
+
+header a:hover::after {
+  width: 100%;
+}
