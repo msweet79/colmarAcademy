@@ -20,6 +20,7 @@ header {
   border: 2px solid black;
   position: fixed;
   z-index: 1;
+  width: 100%;
 }
 
 .mobile-header {
@@ -30,12 +31,12 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  height: 64px;
-  padding: 0 24px;
+  height: 4rem;
+  padding: 0 1.5rem;
 }
 
 .header-left {
-  height: 32px;
+  height: 2rem;
   display: flex;
   justify-content: flex-start;
   align-items: center;
@@ -44,7 +45,7 @@ header {
 
 .company-name {
   font-family: 'Graduate', sans-serif;
-  font-size: 26px;
+  font-size: 1.5rem;
   display: flex;
 }
 
@@ -58,7 +59,7 @@ nav ul {
 
 nav li {
   display: inline-block;
-  margin-left: 16px;
+  margin-left: 1rem;
 }
 
 header a {
@@ -66,24 +67,40 @@ header a {
   text-decoration: none;
 }
 
-nav a::after {
-  content: '';
-  display: block;
-  width: 0;
-  height: 2px;
-  background: #535353;
-  transition: width 0.3s;
+header a:hover {
+  color: #ff3b3f;
+  font-size: 1.1rem;
+  transition: all 0.3s;
 }
 
-.article a::after {
-  content: '';
-  display: block;
-  width: 0;
-  height: 2px;
-  background: #ff3b3f;
-  transition: width 0.3s;
+/* Tablet Header Format*/
+@media only screen and (max-width: 850px) {
+  .mobile-header {
+    display: none;
+  }
+
+  nav li {
+    margin-left: 8px;
+  }
 }
 
-header a:hover::after {
-  width: 100%;
+/*Mobile Header Format*/
+@media only screen and (max-width: 750px) {
+  /* Format page container */
+  .page {
+    width: 100%;
+  }
+  .desktop-header {
+    display: none;
+  }
+  .mobile-header {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 64px;
+  }
+  .mobile-header a:hover {
+    transform: scale(1.3);
+    transition: scale 0.3s;
+  }
 }
